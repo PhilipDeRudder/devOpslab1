@@ -1,0 +1,11 @@
+<p>Todo List</p>
+<input #in1 >
+<button [textContent] ="contentButton"  (onclick) = "AddItem(in1.value)"  ></button>
+
+<form action="">
+    <input name="in1" #invoer type="text" [(ngModel)]="item" placeholder="Geef hier je item in">
+    <button (click)="AddItem()" [disabled]="item == ''">Voeg toe</button>
+  </form>
+  <ol>
+    <li *ngFor="let item of ListItems"> {{item}} </li>
+  </ol>
